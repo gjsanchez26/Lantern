@@ -70,8 +70,8 @@ while True:
     humidity    = getHumidity()
     #altitude    = getAltitude()
     #pressure    = getPressure()
-    s.send(bytes([temperature, humidity]))
+    s.send(bytes([temperature - 10, humidity]))
     print("Successfully send data to Sigfox...")
     print("Sample number" + str(msgNumber))
     msgNumber = msgNumber+1
-    time.sleep(300)
+    time.sleep(120)
