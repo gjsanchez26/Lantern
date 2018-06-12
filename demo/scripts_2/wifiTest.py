@@ -38,8 +38,8 @@ def http_get(url):
             break
     s.close()
 
-connectWifi()
-#do_connect()
+#connectWifi()
+do_connect()
 #http_get('http://micropython.org/ks/test.html')
 
 r = http_client.get('http://micropython.org/ks/test.html')
