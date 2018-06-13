@@ -3,12 +3,12 @@ import time
 import binascii
 import pycom
 
-from pysense     import Pysense
-from LIS2HH12    import LIS2HH12
-from SI7006A20   import SI7006A20
+from pysense import Pysense
+from LIS2HH12 import LIS2HH12
+from SI7006A20 import SI7006A20
 from LTR329ALS01 import LTR329ALS01
-from MPL3115A2   import MPL3115A2, ALTITUDE, PRESSURE
-from network     import Sigfox
+from MPL3115A2 import MPL3115A2, ALTITUDE, PRESSURE
+from network import Sigfox
 
 py      = Pysense()
 si      = SI7006A20(py)
