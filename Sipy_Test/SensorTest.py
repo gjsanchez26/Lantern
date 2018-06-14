@@ -74,4 +74,4 @@ while True:
     print("Successfully send data to Sigfox...")
     print("Sample number" + str(msgNumber))
     msgNumber = msgNumber+1
-    time.sleep(120)
+    time.sleep(30)
