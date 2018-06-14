@@ -1,3 +1,4 @@
+## TOMADO DE https://github.com/balloob/micropython-http-client/blob/master/http_client.py
 import usocket
 import ujson
 try:
@@ -103,12 +104,13 @@ def request(method, url, json=None, timeout=None, headers=None):
         sock.write('\r\n')
 
     l = sock.readline()
-    protover, status, msg = l.split(None, 2)
+
+    protover, status = l.split(None, 2)
 
     # Skip headers
     while sock.readline() != b'\r\n':
         pass
-
+    sock.close()
     return Response(int(status), sock)
 
 
